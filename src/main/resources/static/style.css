@@ -1,0 +1,60 @@
+.back-color {
+    background-color: #90EE90 !important;
+}
+
+.money-color {
+    background-color: #46C646 !important;
+}
+
+.daily-color {
+    background-color: #FFD700 !important;
+}
+
+.button-font {
+   color: black;
+}
+
+.motivational-color {
+    background-color: #FF0000 !important;
+}
+
+.for-footer {
+    padding-top: 60px;
+    bottom:0;
+}
+
+.btn-padding {
+    padding: 20px;
+}
+
+.fixed-margins {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    background-color: red;
+}
+
+.table-div {
+    text-align: center;
+    background: black;
+}
+
+.centred-content {
+    position: relative;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: red;
+    color: red;
+}
+

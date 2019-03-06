@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>home-page</title>
+    <title>main-page</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
-    Successfully loaded home-page!
+
+<div class="text-center jumbotron">
+    <h1>Spring Random Fortune Service app</h1>
+</div>
+<div class="centred-content text-center">
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/daily/random}">Daily fortune</a></button>
+        <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{/motivational/random}">Motivational fortune</a></button>
+        <button type="button" class="btn btn-secondary money-color"><a class="button-font" th:href="@{/money/random}">Money fortune</a></button>
+    </div>
+</div>
+
+<footer class="page-footer font-small for-footer">
+    <div class="footer-copyright text-center py-3 back-color">
+        © 2019 Copyright: Filip Grudzień spring random fortune service app.
+    </div>
+</footer>
+
 </body>
 </html>

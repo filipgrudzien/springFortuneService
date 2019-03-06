@@ -1,11 +1,10 @@
 package com.fortune.repositories;
 
-import com.fortune.entities.Quote;
+import com.fortune.entities.DailyQuote;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DBrepository extends JpaRepository<Quote, Long> {
-
+public interface DailyRepository extends JpaRepository<DailyQuote, Long> {
 
 }
