@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Srisakdi:400,700');
+
 .back-color {
     background-color: #90EE90 !important;
 }
@@ -34,11 +36,11 @@
 
 td {
     text-align: center;
+    display: block;
 }
 
 table {
     margin: 0 auto;
-    background-color: red;
 }
 
 .table-div {
@@ -53,8 +55,21 @@ table {
     justify-content: center;
 }
 
-body {
-    background-color: red;
-    color: red;
+.quote {
+    font-size: 35px;
+    font-family: 'Srisakdi', cursive;
 }
 
+.author {
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.quote-pad {
+    padding-top: 12px;
+}
+
+.author-pad {
+    padding-top: 5px;
+    padding-bottom: 12px;
+}

@@ -3,29 +3,53 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>form-page</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <title>daily-fortune</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
+
     <div class="text-center jumbotron">
-        <h1>Random daily fortune</h1>
+        <h1>Daily fortune</h1>
     </div>
 
     <div class="text-center centred-content">
         <table class="fixed-margins">
             <tbody>
                 <tr th:each="fortune : ${fortunes}">
-                    <td th:text="${fortune.quote}"></td>
-                    <td th:text="${fortune.author}"></td>
+                    <td class="quote-pad"><h1 class="quote" th:text="${fortune.quote}"></h1></td>
+                    <td class="author-pad"><h3 class="author" th:text="${fortune.author}"></h3></td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <div class="centred-content text-center" th:switch="${#lists.size(fortunes)}">
+
+        <div class="text-center" th:case="1">
+            <div class="centred-content text-center">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/}">Main page</a></button>
+                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{daily/all}">Check all daily fortunes</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" th:case="*">
+            <div class="centred-content text-center">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/}">Main page</a></button>
+                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{daily/random}">Check random daily fortune</a></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
 </body>
 </html>

@@ -25,7 +25,7 @@ public class MoneyService {
         List<MoneyQuote> allRecords= moneyRepo.findAll();
         Random randomId = new Random();
         List<MoneyQuote> singleRecordList = new ArrayList<>();
-        singleRecordList.add(allRecords.get(randomId.nextInt()%allRecords.size()));
+        singleRecordList.add(allRecords.get(randomId.nextInt(allRecords.size())));
 
         return singleRecordList;
     }

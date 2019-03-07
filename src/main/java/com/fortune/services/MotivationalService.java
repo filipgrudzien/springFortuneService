@@ -26,7 +26,7 @@ public class MotivationalService {
         List<MotivationalQuote> allRecords= motivationalRepo.findAll();
         Random randomId = new Random();
         List<MotivationalQuote> singleRecordList = new ArrayList<>();
-        singleRecordList.add(allRecords.get(randomId.nextInt()%allRecords.size()));
+        singleRecordList.add(allRecords.get(randomId.nextInt(allRecords.size())));
 
         return singleRecordList;
     }
