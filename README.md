@@ -1,5 +1,4 @@
 # springFortuneService
-thymeleaf - spring boot - html - jpa
 
 This project is simple fortune service that uses technologies like:
 - spring boot
@@ -8,5 +7,6 @@ This project is simple fortune service that uses technologies like:
 - hibernate
 - MySQL
 - h2
+- JPA
 
 App is not deployed, so data from local MySQL database will not be fetched.
