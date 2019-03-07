@@ -9,9 +9,11 @@ import com.fortune.services.MotivationalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -34,5 +36,15 @@ public class MotivationalController {
         return "motivation";
     }
 
+    @RequestMapping("/viewRandomMotivational")
+    public ModelAndView showRandomDailyQuotes(ModelMap model){
+        model.addAttribute("fortunes", motivationalService.getRandomMotivationalQuote());
+        return new ModelAndView("redirect:/daily/random", model);
+    }
 
+    @RequestMapping("/viewAllMotivational")
+    public ModelAndView showAllDailyQuotes(ModelMap model){
+        model.addAttribute("fortunes", motivationalService.getAllMotivationalQuotes());
+        return new ModelAndView("redirect:/daily/all", model);
+    }
 }

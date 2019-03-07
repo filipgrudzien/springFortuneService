@@ -32,18 +32,18 @@
 
         <div class="text-center" th:case="1">
             <div class="centred-content text-center">
-                <div class="btn-group" role="group">
+                <div class="btn-group buttons-pad" role="group">
                     <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/}">Main page</a></button>
-                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{daily/all}">Check all daily fortunes</a></button>
+                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{viewAllDaily}">Check all daily fortunes</a></button>
                 </div>
             </div>
         </div>
 
         <div class="text-center" th:case="*">
             <div class="centred-content text-center">
-                <div class="btn-group" role="group">
+                <div class="btn-group buttons-pad" role="group">
                     <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/}">Main page</a></button>
-                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{daily/random}">Check random daily fortune</a></button>
+                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{viewRandomDaily}">Check random daily fortune</a></button>
                 </div>
             </div>
         </div>

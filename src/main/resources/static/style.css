@@ -73,3 +73,7 @@ table {
     padding-top: 5px;
     padding-bottom: 12px;
 }
+
+.buttons-pad {
+    padding-bottom: 15px;
+}

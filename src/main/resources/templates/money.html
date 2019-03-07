@@ -27,5 +27,27 @@
         </table>
     </div>
 
+    <div class="centred-content text-center" th:switch="${#lists.size(fortunes)}">
+
+        <div class="text-center" th:case="1">
+            <div class="centred-content text-center">
+                <div class="btn-group buttons-pad" role="group">
+                    <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/}">Main page</a></button>
+                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{viewAllMoney}">Check all money fortunes</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" th:case="*">
+            <div class="centred-content text-center">
+                <div class="btn-group buttons-pad" role="group">
+                    <button type="button" class="btn btn-secondary daily-color"><a class="button-font" th:href="@{/}">Main page</a></button>
+                    <button type="button" class="btn btn-secondary motivational-color"><a class="button-font" th:href="@{viewRandomMoney}">Check random money fortune</a></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
